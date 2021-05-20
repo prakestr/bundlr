@@ -1,0 +1,58 @@
+{
+    "type": "bundle",
+    "id": "bundle--8099968f-6408-4ba0-a408-d23d03761138",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "identity",
+            "id": "identity--3532c56d-ea72-48be-a2ad-1a53f4c9c6d3",
+            "name": "msatp",
+            "identity_class": "events",
+            "created": "2021-05-19T08:56:13.810Z",
+            "modified": "2021-05-19T08:56:13.810Z"
+        },
+        {
+            "id": "observed-data--0782804f-5321-4868-b0c4-35335031d34c",
+            "type": "observed-data",
+            "created_by_ref": "identity--3532c56d-ea72-48be-a2ad-1a53f4c9c6d3",
+            "created": "2021-05-19T08:56:13.810Z",
+            "modified": "2021-05-19T08:56:13.810Z",
+            "objects": {
+              "0": {
+                "type": "process",
+                "binary_ref": "1",
+                "name": "svchost.exe",
+                "pid": 824,
+                "command_line": "svchost.exe -k netsvcs",
+                "created": "2021-03-17T19:57:31.109Z"
+              },
+              "1": {
+                "type": "file",
+                "hashes": {
+                  "SHA-1": "7052346f46d41bef29515c89d1ea099197b867b5",
+                  "SHA-256": "c7db4ae8175c33a47baa3ddfa089fad17bc8e362f21e835d78ab22c9231fe370",
+                  "MD5": "e3a2ad05e24105b35e986cf9cb38ec47"
+                },
+                "name": "svchost.exe",
+                "parent_directory_ref": "2"
+              },
+              "2": { "type": "directory", "path": "c:\\windows\\system32" },
+     
+              "3": {
+                "type": "windows-registry-key",
+                "key": "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\W32Time\\TimeProviders\\NtpClient",
+                "values": [
+                  {
+                    "data_type": "REG_MULTI_SZ",
+                    "name": "SpecialPollTimeRemaining",
+                    "data": "time.windows.com,7e835e2"
+                  }
+                ]
+              }
+            },
+            "first_observed": "2021-05-19T06:13:35.318Z",
+            "last_observed": "2021-05-19T06:13:35.318Z",
+            "number_observed": 1
+          }
+    ]
+}
