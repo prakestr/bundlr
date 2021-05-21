@@ -1,60 +1,61 @@
 {
-	"id": "bundle--01cf4b1e-bde5-4b6d-8743-12f2f41c1c90",
-	"objects": [
-		{
-			"created": "2021-05-03T22:55:42.099Z",
-			"id": "identity--20feee85-f6f8-427c-9dc1-7fde08310491",
-			"identity_class": "events",
-			"name": "Guardium",
-			"type": "identity",
-			"x_guardium_report": "Analytic Outliers Details List - Enhanced"
-		},
-		{
-			"created": "2021-05-03T22:55:42.099Z",
-			"created_by_ref": "identity--20feee85-f6f8-427c-9dc1-7fde08310491",
-			"first_observed": "2021-05-03T22:55:42.099Z",
-			"last_observed": "2021-05-03T22:55:42.099Z",
-			"id": "observed-data--e5d9f23d-8eaf-467e-a785-90c528f2693c",
-			"modified": "2021-05-03T22:55:42.099Z",
-			"number_observed": 1,
-			"objects": {
-				"0": {
-					"type": "user-account",
-					"user_id": "GUYGA"
-				},
-				"1": {
-					"type": "ipv4-addr",
-					"value": "9.147.31.28"
-				},
-				"2": {
-					"dst_port": 3357,
-					"dst_ref": "1",
-					"src_port": 56620,
-					"src_ref": "3",
-					"type": "network-traffic",
-					"protocols": [
-						"tcp",
-						"ipv4"
-					]
-				},
-				"3": {
-					"type": "ipv4-addr",
-					"value": "9.148.24.172"
-				}
-			},
-			"type": "observed-data",
-			"x_com_guardium": {
-				"anomaly_score": 100,
-				"db_user": "GUYGA",
-				"error_outlier": "false",
-				"high_volume_outlier": "true",
-				"new_outlier": "false",
-				"service_name": "9.147.31.28:5.6.27",
-				"source_program": "MYSQL CLIENT",
-				"temp_outlier": "false"
-			}
-		}
-	],
-	"spec_version": "2.0",
-	"type": "bundle"
+  "id": "bundle--01cf4b1e-bde5-4b6d-8743-12f2f41c1c90",
+  "objects": [
+    {
+      "created": "2021-05-03T22:55:42.099Z",
+      "id": "identity--20feee85-f6f8-427c-9dc1-7fde08310491",
+      "identity_class": "events",
+      "name": "Guardium",
+      "type": "identity",
+      "x_guardium_report": "Analytic Outliers Details List - Enhanced"
+    },
+    {
+      "created": "2021-05-03T22:55:42.099Z",
+      "created_by_ref": "identity--20feee85-f6f8-427c-9dc1-7fde08310491",
+      "first_observed": "2021-05-03T22:55:42.099Z",
+      "last_observed": "2021-05-03T22:55:42.099Z",
+      "id": "observed-data--e5d9f23d-8eaf-467e-a785-90c528f2693c",
+      "modified": "2021-05-03T22:55:42.099Z",
+      "number_observed": 1,
+      "objects": {
+        "0": {
+          "type": "user-account",
+          "user_id": "GUYGA"
+        },
+        "1": {
+          "type": "ipv4-addr",
+          "value": "9.147.31.28"
+        },
+        "2": {
+          "dst_port": 3357,
+          "dst_ref": "1",
+          "src_port": 56620,
+          "src_ref": "3",
+          "type": "network-traffic",
+          "protocols": ["tcp", "ipv4"]
+        },
+        "3": {
+          "type": "ipv4-addr",
+          "value": "9.147.31.113"
+        },
+        "4": {
+          "type": "ipv4-addr",
+          "value": "9.148.24.172"
+        }
+      },
+      "type": "observed-data",
+      "x_com_guardium": {
+        "anomaly_score": 100,
+        "db_user": "GUYGA",
+        "error_outlier": "false",
+        "high_volume_outlier": "true",
+        "new_outlier": "false",
+        "service_name": "9.147.31.28:5.6.27",
+        "source_program": "MYSQL CLIENT",
+        "temp_outlier": "false"
+      }
+    }
+  ],
+  "spec_version": "2.0",
+  "type": "bundle"
 }
