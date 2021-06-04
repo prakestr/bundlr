@@ -1816,43 +1816,7 @@
 					"type": "x-ecs-network",
 					"community_id": "1:bli5jeDB7AVI7EGFeSe2RWw0/s4=",
 					"direction": "unknown"
-				},
-				"12": {
-					"type": "url",
-                    "value": "http://scorpena.com"
-				},
-				"13": {
-					"type": "url",
-                    "value": "http://83.217.8.127"
-				},
-				"14": {
-					"type": "url",
-                    "value": "http://83.217.8.127/submit.php"
-				},
-				"15": {
-					"type": "url",
-                    "value": "http://scorpena.com/765f46vb.exe"
-				},
-				"16": {
-					"type": "domain-name",
-					"value": "scorpena.com"
-				},
-				"17": {
-					"type": "url",
-					"value": "http://uyghurweb.net"
-				},
-				"18": {
-					"type": "url",
-					"value": "http://192.232.218.212"
-				},
-				"19": {
-					"type": "url",
-					"value": "http://uyghurweb.net/player/gmuweb.exe"
-				},
-				"20": {
-					"type": "url",
-					"value": "http://t-mobile.com"
-				}								
+				}
 			},
 			"first_observed": "2021-01-14T12:34:04.520Z",
 			"last_observed": "2021-01-14T12:34:04.520Z",
