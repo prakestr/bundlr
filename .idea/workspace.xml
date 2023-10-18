@@ -5,55 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7e5b08e-18eb-4b7c-adea-2d363845906a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/rahulshettyacademy/AbstractComponents/AbstractComponent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/rahulshettyacademy/pageobjects/BasePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/rahulshettyacademy/pageobjects/CartPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/rahulshettyacademy/pageobjects/CheckoutPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/rahulshettyacademy/pageobjects/OrdersPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/rahulshettyacademy/pageobjects/ProductPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/registerUser.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/testAddProductToCart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/testCartNavigationAndProductPresence.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/testCheckoutProcess.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/testOrderConfirmation.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/testProductNameInOrders.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/rahulshettyacademy/StandAloneTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/rahulshettyacademy/SubmitOrderTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/rahulshettyacademy/automationexercise/features/UserRegistration.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/rahulshettyacademy/automationexercise/pageobjects/UserRegistrationPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/rahulshettyacademy/automationexercise/runners/CucumberRunnerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/rahulshettyacademy/automationexercise/stepdefinitions/UserRegistrationSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/rahulshettyacademy/automationexercise/tests/UserRegistrationPageTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/rahulshettyacademy/automationexercise/utils/WebDriverSingleton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/rahulshettyacademy/data/JsonUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/rahulshettyacademy/data/data.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/rahulshettyacademy/features/Products.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/rahulshettyacademy/pageobjects/BasePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/rahulshettyacademy/pageobjects/CartPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/rahulshettyacademy/pageobjects/CheckoutPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/rahulshettyacademy/pageobjects/OrdersPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/rahulshettyacademy/pageobjects/ProductPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/rahulshettyacademy/runners/TestRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/rahulshettyacademy/stepdefinitions/ProductSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/rahulshettyacademy/tests/ECommerceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/rahulshettyacademy/util/CustomListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/rahulshettyacademy/util/DriverManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/rahulshettyacademy/util/TestContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testNG.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testng-ecom-group.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testng-ecommerce.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testng-registration.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
