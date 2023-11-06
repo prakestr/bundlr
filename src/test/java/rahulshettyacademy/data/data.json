@@ -1,14 +1,3 @@
-[
-  {
-    "email": "phil@hotmail.com",
-    "password": "Klm9000!",
-    "productName": "adidas original",
-    "country": "South Africa"
-  },
-  {
-    "email": "shonj@hotmail.com",
-    "password": "Qradar.1",
-    "productName": "iphone 13 pro",
-    "country": "United States"
-  }
-]
+version https://git-lfs.github.com/spec/v1
+oid sha256:cb2390c50df3d5813b2d5559c45b00e0ed2cfb45bd591894571a2b699afc431e
+size 279
