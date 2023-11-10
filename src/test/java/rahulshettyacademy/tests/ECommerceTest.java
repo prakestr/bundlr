@@ -36,7 +36,7 @@ public class ECommerceTest {
     }
 
 
-    @Test(dataProvider = "productData")
+    @Test(dataProvider = "productData", groups = { "Purchase" })
     public void testAddProductToCart(HashMap<String, String> data) {
         productPage.addProductToCartByName(data.get("productName"));
         String toastMsg = productPage.getToastMessage();
