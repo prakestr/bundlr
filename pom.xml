@@ -9,8 +9,8 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>20</maven.compiler.source> <!-- Adjust these numbers as per your JDK -->
-        <maven.compiler.target>20</maven.compiler.target> <!-- Adjust these numbers as per your JDK -->
+        <maven.compiler.source>17</maven.compiler.source> <!-- Updated to Java 17 -->
+        <maven.compiler.target>17</maven.compiler.target> <!-- Updated to Java 17 -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
