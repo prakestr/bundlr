@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a7e5b08e-18eb-4b7c-adea-2d363845906a" name="Changes" comment="">
+    <list default="true" id="a7e5b08e-18eb-4b7c-adea-2d363845906a" name="Changes" comment="update automation ECommerceTest">
       <change afterPath="$PROJECT_DIR$/allure-results/00343aae-4c94-488e-a58e-8679353a83d0-result.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/allure-results/02a3f0a0-115b-43b8-962d-55ccb8f5261e-container.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/allure-results/05a84133-a2d4-4e02-a8e8-e377d2511452-container.json" afterDir="false" />
@@ -206,22 +206,6 @@
       <change afterPath="$PROJECT_DIR$/allure-results/fcbd9827-383b-4430-b8f6-0e5b8ef31abe-result.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/allure-results/fd36b462-2256-4f37-915f-b4343386408b-result.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/allure-results/feb4cb72-4c6e-41cf-872f-ad1ff4369a8c-container.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/testAddProductToCart.png" beforeDir="false" afterPath="$PROJECT_DIR$/screenshots/testAddProductToCart.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/rahulshettyacademy/StandAloneTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/rahulshettyacademy/SubmitOrderTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/rahulshettyacademy/automationexercise/features/UserRegistration.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/rahulshettyacademy/automationexercise/pageobjects/UserRegistrationPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/rahulshettyacademy/automationexercise/runners/CucumberRunnerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/rahulshettyacademy/automationexercise/stepdefinitions/UserRegistrationSteps.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/rahulshettyacademy/automationexercise/tests/UserRegistrationPageTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/rahulshettyacademy/automationexercise/utils/WebDriverSingleton.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/rahulshettyacademy/tests/ECommerceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/rahulshettyacademy/tests/ECommerceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testNG.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testng-ecom-group.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testng-ecommerce.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testng.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testng-registration.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -372,6 +356,14 @@
       <option name="presentableId" value="Default" />
       <updated>1695314095458</updated>
     </task>
+    <task id="LOCAL-00001" summary="update automation ECommerceTest">
+      <created>1699586264258</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1699586264258</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -387,5 +379,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="update automation ECommerceTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="update automation ECommerceTest" />
   </component>
 </project>
