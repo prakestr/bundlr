@@ -6,7 +6,7 @@
     </listeners>
     <test name="ECommerce Tests">
         <classes>
-            <class name="rahulshettyacademy.tests.ECommerceTest" />
+            <class name="rahulshettyacademy.runners.TestRunner" />
         </classes>
     </test>
 </suite>
