@@ -1,25 +1,28 @@
 pipeline {
     agent any
 
-    tools {
-        maven "Maven" // The name of the Maven installation to use.
-        jdk "JDK" // The name of the JDK installation to use.
-    }
-
     stages {
         stage('Checkout') {
             steps {
-                // Checks out the code from the GitHub repository
                 git 'https://github.com/prakestr/bundlr.git'
+            }
+        }
+
+        stage('Start Selenium Grid') {
+            steps {
+                // Start the Selenium Grid using docker-compose
+                sh 'docker-compose -f docker-compose.yml up -d selenium-hub chrome'
             }
         }
 
         stage('Build and Test') {
             steps {
-                // Run your Maven build and execute tests
+                // Run your Maven build and execute tests, pointing to the Selenium Grid
                 script {
-                    // If you have the Maven wrapper in your project, you can use ./mvnw instead of mvn
-                    sh 'mvn clean test'
+                    // Set the URL for the Selenium Grid Hub as an environment variable or system property
+                    // so that your tests know where to connect to
+                    // This would be used in your test code to set up the WebDriver
+                    sh 'mvn clean test -DSELENIUM_HUB_URL=http://localhost:4444/wd/hub'
                 }
             }
         }
@@ -27,7 +30,6 @@ pipeline {
         stage('Generate Reports') {
             steps {
                 script {
-                    // Assuming you have a report directory after tests are run
                     sh 'mvn allure:report'
                 }
             }
@@ -35,7 +37,6 @@ pipeline {
 
         stage('Publish Reports') {
             steps {
-                // This will publish the Allure report generated in the target/site/allure-maven-plugin directory
                 publishHTML(target: [
                     allowMissing: false,
                     alwaysLinkToLastBuild: true,
@@ -46,5 +47,20 @@ pipeline {
                 ])
             }
         }
+
+        stage('Stop Selenium Grid') {
+            steps {
+                // Stop the Selenium Grid using docker-compose
+                sh 'docker-compose -f docker-compose.yml down'
+            }
+        }
+    }
+
+    post {
+        always {
+            // Ensure that the Selenium Grid is shut down even if the build fails
+            sh 'docker-compose -f docker-compose.yml down'
+        }
     }
 }
+
