@@ -10,8 +10,8 @@ pipeline {
 
         stage('Start Selenium Grid') {
             steps {
-                // Start the Selenium Grid using docker-compose
-                sh 'docker-compose -f docker-compose.yml up -d selenium-hub chrome'
+                // Start the Selenium Grid using docker-compose with full path
+                sh '/usr/local/bin/docker-compose -f docker-compose.yml up -d selenium-hub chrome'
             }
         }
 
@@ -50,8 +50,8 @@ pipeline {
 
         stage('Stop Selenium Grid') {
             steps {
-                // Stop the Selenium Grid using docker-compose
-                sh 'docker-compose -f docker-compose.yml down'
+                // Stop the Selenium Grid using docker-compose with full path
+                sh '/usr/local/bin/docker-compose -f docker-compose.yml down'
             }
         }
     }
@@ -59,8 +59,8 @@ pipeline {
     post {
         always {
             // Ensure that the Selenium Grid is shut down even if the build fails
-            sh 'docker-compose -f docker-compose.yml down'
+            // Using the full path for docker-compose
+            sh '/usr/local/bin/docker-compose -f docker-compose.yml down'
         }
     }
 }
-
