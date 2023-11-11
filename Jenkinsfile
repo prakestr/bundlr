@@ -2,6 +2,14 @@ pipeline {
     agent any
 
     stages {
+        stage('Debug PATH') {
+            steps {
+                // This will print the PATH environment variable to the console log
+                sh 'echo "Checking PATH: $PATH"'
+                sh 'which docker-compose || echo "docker-compose not found in PATH"'
+            }
+        }
+
         stage('Checkout') {
             steps {
                 git 'https://github.com/prakestr/bundlr.git'
