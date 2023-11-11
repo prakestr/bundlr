@@ -5,11 +5,10 @@ import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
 import org.testng.Assert;
 import rahulshettyacademy.pageobjects.*;
-import rahulshettyacademy.util.TestContext;
+import rahulshettyacademy.util.DriverManager;
 
 public class ProductSteps {
 
-    private TestContext testContext;
     private ProductPage productPage;
     private CartPage cartPage;
     private CheckoutPage checkoutPage;
@@ -17,13 +16,12 @@ public class ProductSteps {
 
     @Before
     public void setUp() {
-        this.testContext = new TestContext();  // Initialize testContext here
-        testContext.refreshDriver();  // This will ensure you have a fresh driver for each scenario
+        DriverManager.refreshDriver(); // This will ensure you have a fresh driver for each scenario
 
-        productPage = new ProductPage(testContext.getDriver());
-        cartPage = new CartPage(testContext.getDriver());
-        checkoutPage = new CheckoutPage(testContext.getDriver());
-        ordersPage = new OrdersPage(testContext.getDriver());
+        productPage = new ProductPage(DriverManager.getDriver());
+        cartPage = new CartPage(DriverManager.getDriver());
+        checkoutPage = new CheckoutPage(DriverManager.getDriver());
+        ordersPage = new OrdersPage(DriverManager.getDriver());
 
         productPage.goTo();
     }
@@ -31,9 +29,6 @@ public class ProductSteps {
     public ProductSteps() {
         // Constructor body can be left empty since initialization is now done in the setUp method
     }
-
-
-
 
     @Given("^I launch the application with email \"([^\"]*)\" and password \"([^\"]*)\"$")
     public void i_launch_application(String email, String password) {
@@ -99,9 +94,8 @@ public class ProductSteps {
         if(productPage.isUserLoggedIn()) {
             productPage.logout();
         }
-        testContext.getDriver().quit();
+        DriverManager.quitDriver();
     }
 
 }
-
 
