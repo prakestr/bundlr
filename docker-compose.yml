@@ -4,12 +4,10 @@ services:
     image: selenium/hub:latest
     ports:
       - "4444:4444"
+
   chrome:
     image: selenium/node-chrome:latest
     depends_on:
       - selenium-hub
     environment:
       - HUB_HOST=selenium-hub
-
-  # Define other services like your web application here
-
