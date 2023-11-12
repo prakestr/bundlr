@@ -12,7 +12,7 @@ pipeline {
         stage('Build and Test') {
             steps {
                 // Run your Maven build and execute tests, pointing to the Selenium Grid
-                sh 'mvn clean test -DSELENIUM_HUB_URL=http://172.17.0.1:4444/wd/hub'
+                sh 'mvn clean test -DSELENIUM_HUB_URL=http://localhost:4444/wd/hub'
             }
         }
 
