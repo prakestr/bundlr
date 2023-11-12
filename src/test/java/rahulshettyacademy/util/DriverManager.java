@@ -1,31 +1,38 @@
 package rahulshettyacademy.util;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URL;
 
 public class DriverManager {
 
     private static WebDriver driver;
+    private static final String SELENIUM_HUB_URL = "http://selenium-hub:4444/wd/hub";
 
     private DriverManager() { }
 
     public static WebDriver getDriver() {
         if (driver == null) {
-            WebDriverManager.chromedriver().setup();
-            // Set Chrome to run headlessly
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--headless");
             options.addArguments("--disable-gpu");
             options.addArguments("--window-size=1920,1080");
-            options.setBinary("/path/to/chrome"); // Replace with the path to the Chrome binary
-            WebDriverManager.chromedriver().setup();
-            driver = new ChromeDriver(options);
+            options.addArguments("--no-sandbox"); // Bypass OS security model
+            options.addArguments("--disable-dev-shm-usage"); // Overcome limited resource problems
 
-            // If you wish to switch back to GUI mode, comment out the above and uncomment below
-            // driver = new ChromeDriver();
-            // driver.manage().window().maximize();
+            DesiredCapabilities capabilities = new DesiredCapabilities();
+            capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+
+            try {
+                URL hubUrl = URI.create(SELENIUM_HUB_URL).toURL();
+                driver = new RemoteWebDriver(hubUrl, capabilities);
+            } catch (MalformedURLException e) {
+                throw new RuntimeException("The URL provided for the Selenium Hub is malformed", e);
+            }
         }
         return driver;
     }
@@ -38,9 +45,7 @@ public class DriverManager {
     }
 
     public static void refreshDriver() {
-        if (driver != null) {
-            driver.quit();
-        }
-        driver = null; // Set it to null so that getDriver() will reinitialize it
+        quitDriver();
+        getDriver();
     }
 }

@@ -30,7 +30,7 @@ pipeline {
                     // Set the URL for the Selenium Grid Hub as an environment variable or system property
                     // so that your tests know where to connect to
                     // This would be used in your test code to set up the WebDriver
-                    sh 'mvn clean test -DSELENIUM_HUB_URL=http://localhost:4444/wd/hub'
+                    sh 'mvn clean test -DSELENIUM_HUB_URL=http://selenium-hub:4444/wd/hub'
                 }
             }
         }
