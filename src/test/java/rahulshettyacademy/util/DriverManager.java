@@ -11,7 +11,7 @@ import java.net.URL;
 public class DriverManager {
 
     private static WebDriver driver;
-    private static final String SELENIUM_HUB_URL = "http://selenium-hub:4444/wd/hub";
+    private static final String SELENIUM_HUB_URL = "http://localhost:4444/wd/hub"; // Pointing to the standalone server
 
     private DriverManager() { }
 
@@ -21,8 +21,8 @@ public class DriverManager {
             options.addArguments("--headless");
             options.addArguments("--disable-gpu");
             options.addArguments("--window-size=1920,1080");
-            options.addArguments("--no-sandbox"); // Bypass OS security model
-            options.addArguments("--disable-dev-shm-usage"); // Overcome limited resource problems
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
 
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability(ChromeOptions.CAPABILITY, options);
@@ -31,7 +31,7 @@ public class DriverManager {
                 URL hubUrl = URI.create(SELENIUM_HUB_URL).toURL();
                 driver = new RemoteWebDriver(hubUrl, capabilities);
             } catch (MalformedURLException e) {
-                throw new RuntimeException("The URL provided for the Selenium Hub is malformed", e);
+                throw new RuntimeException("The URL provided for the Selenium server is malformed", e);
             }
         }
         return driver;
