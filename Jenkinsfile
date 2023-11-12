@@ -27,11 +27,14 @@ pipeline {
 
     post {
         always {
-            // Stop the standalone Selenium server
-            sh 'docker stop selenium-standalone'
-            sh 'docker rm selenium-standalone'
-            // Archive the test results
-            archiveArtifacts artifacts: '**/test-output/*', allowEmptyArchive: true
+             // Publish Allure reports
+                        allure([
+                            includeProperties: false,
+                            jdk: '',
+                            properties: [],
+                            reportBuildPolicy: 'ALWAYS',
+                            results: [[path: 'allure-results']]
+                        ])
         }
     }
 }
