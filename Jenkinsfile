@@ -17,22 +17,10 @@ pipeline {
             }
         }
 
-        stage('Generate Reports') {
-            steps {
-                sh 'mvn allure:report'
-            }
-        }
-
         stage('Publish Reports') {
             steps {
-                publishHTML(target: [
-                    allowMissing: false,
-                    alwaysLinkToLastBuild: true,
-                    keepAll: true,
-                    reportDir: 'target/site/allure-maven-plugin',
-                    reportFiles: 'index.html',
-                    reportName: 'Allure Report'
-                ])
+                // Publish TestNG Reports
+                step([$class: 'Publisher', reportFilenamePattern: '**/testng-results.xml'])
             }
         }
     }
@@ -42,6 +30,8 @@ pipeline {
             // Stop the standalone Selenium server
             sh 'docker stop selenium-standalone'
             sh 'docker rm selenium-standalone'
+            // Archive the test results
+            archiveArtifacts artifacts: '**/test-output/*', allowEmptyArchive: true
         }
     }
 }
