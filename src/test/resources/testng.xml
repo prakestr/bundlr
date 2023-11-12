@@ -3,6 +3,8 @@
 <suite name="ECommerce Test Suite">
     <listeners>
         <listener class-name="rahulshettyacademy.util.CustomListener" />
+        <!-- Add the Allure TestNG listener -->
+        <listener class-name="io.qameta.allure.testng.AllureTestNg" />
     </listeners>
     <test name="ECommerce Tests">
         <classes>
